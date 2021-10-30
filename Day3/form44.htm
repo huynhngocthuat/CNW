@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+</head>
+
+<body onload="document.form.input.focus()"> 
+    <div class="col-8 offset-2 mt-5">
+        <form action="" name="form" class="row g-3 needs-validation">
+            <div class="col-md-3">
+                <select class="form-control" name="selectt">
+                    <option>Index 0</option>
+                    <option>Index 1</option>
+                    <option>Index 2</option>
+                    <option>Index 3</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <input type="text" name="text" class="form-control">
+            </div>
+            <div class="col-md-2">
+                <input class="btn btn-primary" type="button" name="" value="Click here" onclick="enter()">
+            </div>
+        </form>
+    </div>
+    <script>
+        function enter() {
+            document.form.selectt.selectedIndex = document.form.text.value
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+</head>
+<script>
+    function addPrice(amount)
+    {
+        with(this){price = amount;}
+    }
+
+    function Book(title, author, content)
+    {
+        this.title = title;
+        this.author = author;
+        this.content = content;
+        this.price = 0;
+        this.addPrice=addPrice;
+    }
+
+    function write()
+    {
+        var myBook = new Book("Java", "Sun", "OOP");
+        myBook.addPrice(500);
+        document.write("Book title is : " + myBook.title + "<br>");
+        document.write("Book author is : " + myBook.author + "<br>");
+        document.write("Book content is : " + myBook.content + "<br>");
+        document.write("Book price is : " + myBook.price + "<br>");
+    }
+</script>
+<body>
+    <div class="row">
+        <!-- <div class="col-3 offset-2 mt-4">
+            <form action="" name="form">
+                <div>
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" name="title" id="title">
+                </div>
+                <div>
+                    <label for="author">Author</label>
+                    <input type="text" class="form-control" name="author" id="author">
+                </div>
+                <div>
+                    <label for="content">Content</label>
+                    <input type="text" class="form-control" name="content" id="content">
+                </div>
+                <div>
+                    <label for="price">Price</label>
+                    <input type="text" class="form-control" name="price" id="price">
+                </div>
+                <div class="mt-2 float-right">  
+                    <input class="btn btn-primary" type="button" name="" value="Click here" onclick="change()">
+                </div>
+            </form>
+        </div> -->
+        <div class="col-3 mt-4">
+            <script>
+                write();
+            </script>
+        </div>
+    </div>
+    
+    
+</body>
+
+<style>
+    body{
+        margin-top: 50px;   
+        text-align: center;
+        color: darkslategrey;
+    }
+</style>
+</html>

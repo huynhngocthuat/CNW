@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+</head>
+
+<body onload="document.form.input.focus()">
+    <div class="col-3 offset-2 mt-4">
+        <form action="" name="form">
+            <div>
+                <label for="input">INPUT</label>
+                <input type="text" class="form-control" name="input" id="input" onblur="change()">
+            </div>
+            <div>
+                <label for="output">OUTPUT</label>
+                <input type="text" class="form-control" name="output" id="output">
+            </div>
+        </form>
+    </div>
+    <script>
+        function change(){
+            var input = document.form.input.value;
+            var output = "";
+            for(var i = 0; i < input.length; i++){
+                if(input.charCodeAt(i) >= 65 && input.charCodeAt(i) <= 90){
+                    output += input[i].toLowerCase();
+                }
+                if(input.charCodeAt(i) >= 97 && input.charCodeAt(i) <= 122){
+                    output += input[i].toUpperCase();
+                }
+            }
+            document.form.output.value = output;
+        }
+    </script>
+</body>
+
+</html>
